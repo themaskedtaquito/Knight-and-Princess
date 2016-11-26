@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/PlatformerTutorial_Mari.unity
+  isLoaded: 1
+  isActive: 1
