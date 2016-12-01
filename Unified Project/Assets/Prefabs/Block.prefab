@@ -22,7 +22,7 @@ GameObject:
   - 33: {fileID: 33000012173821478}
   - 23: {fileID: 23000013178862658}
   - 61: {fileID: 61000011428348184}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Block
   m_TagString: Destructable
   m_Icon: {fileID: 0}

@@ -30,12 +30,18 @@ public class PrincessController : MonoBehaviour {
 
 		if (Input.GetMouseButton (1) && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
-			Vector3 screenPoint = Input.mousePosition;
-			screenPoint.z = 20.0f; //distance of the plane from the camera
-			screenPoint = Camera.main.ScreenToWorldPoint(screenPoint);
-			Instantiate (block, screenPoint, shotSpawn.rotation);
-			Debug.Log("mouse: " + Camera.main.ScreenToWorldPoint(screenPoint));
-		}
+
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                Instantiate(block, hit.point, Quaternion.identity);
+            }
+            //Vector3 screenPoint = Input.mousePosition;
+            //screenPoint.z = 20.0f; //distance of the plane from the camera
+            //screenPoint = Camera.main.ScreenToWorldPoint(screenPoint);
+            //Instantiate(block, screenPoint, shotSpawn.rotation);
+        }
 
 
 

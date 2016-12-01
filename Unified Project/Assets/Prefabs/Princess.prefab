@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011879825642}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: shot spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - 114: {fileID: 114000012728027450}
   - 50: {fileID: 50000010696469722}
   - 61: {fileID: 61000013464056162}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Princess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  shot: {fileID: 1000010206606946, guid: c656b17afc0274e799669854cd1b1c27, type: 2}
+  block: {fileID: 0}
+  slow: {fileID: 0}
+  knockdown: {fileID: 0}
   shotSpawn: {fileID: 4000011879825642}
   fireRate: 0.25
 --- !u!212 &212000011036435850
