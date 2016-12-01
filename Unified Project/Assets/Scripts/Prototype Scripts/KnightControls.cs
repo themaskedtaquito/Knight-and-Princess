@@ -4,6 +4,7 @@ using System.Collections;
 public class KnightControls : MonoBehaviour {
     public GameObject currentPlatform;
     public Transform groundCheck;
+    public MovePlatform MovePlatform;
     
 
     public float jumpForce = 500;
@@ -52,8 +53,9 @@ public class KnightControls : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("ground"))
+        if (col.gameObject.CompareTag("ground") && col.gameObject != currentPlatform)
         {
+            MovePlatform.movePlatform();
             currentPlatform = col.gameObject;
         }
 
@@ -66,8 +68,11 @@ public class KnightControls : MonoBehaviour {
         if (col.gameObject.CompareTag("KnockDown"))
         {
             c.isTrigger = true;
+            
             Destroy(col.gameObject);
         }
+
+        
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -75,6 +80,7 @@ public class KnightControls : MonoBehaviour {
         if (other.gameObject.CompareTag("ground") && other.gameObject != currentPlatform)
         {
             c.isTrigger = false;
+            MovePlatform.movePlatform();
         }
     }
 

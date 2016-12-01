@@ -22,7 +22,8 @@ GameObject:
   - 33: {fileID: 33000012173821478}
   - 23: {fileID: 23000013178862658}
   - 61: {fileID: 61000011428348184}
-  m_Layer: 0
+  - 50: {fileID: 50000012939987854}
+  m_Layer: 9
   m_Name: Block
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -78,6 +79,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014111630440}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!50 &50000012939987854
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014111630440}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!61 &61000011428348184
 BoxCollider2D:
   m_ObjectHideFlags: 1
