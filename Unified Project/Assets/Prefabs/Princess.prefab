@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013043007164}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15449852, y: 4.190766, z: 0}
+  m_LocalPosition: {x: -2.6, y: 4.190766, z: 0}
   m_LocalScale: {x: 1.0868161, y: 1.0868161, z: 1.0868161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -115,11 +115,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  block: {fileID: 0}
-  slow: {fileID: 0}
-  knockdown: {fileID: 0}
-  shotSpawn: {fileID: 4000011879825642}
   fireRate: 0.25
+  shotSpawn: {fileID: 4000011879825642}
+  block: {fileID: 1000014111630440, guid: dc240cfa5fd8a4ee28cce271d613a27a, type: 2}
+  knockblock: {fileID: 1000010154809618, guid: f5e2f707e4c68a449a4175965055324a, type: 2}
+  slow: {fileID: 1000013649659620, guid: 5fbd3ba1453a75c42af3b638e9fbdf8f, type: 2}
+  knockdown: {fileID: 1000013206422586, guid: 38de4cf73aeb57a45a9750e4b506dc07, type: 2}
+  slowButton: {fileID: 0}
+  knockdownButton: {fileID: 0}
+  knockcharges: {fileID: 0}
+  charges: {fileID: 0}
 --- !u!212 &212000011036435850
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -5,19 +5,25 @@ using UnityEngine.UI;
 public class PrincessController : MonoBehaviour {
 
 	public float speed;
+    public float fireRate;
+    private float nextFire;
+    public Transform shotSpawn;
 
-	public GameObject block;
+    public GameObject block;
+    public GameObject knockblock;
 	public GameObject slow;
-    public Button slowButton;
-	public GameObject knockdown;
-    public Button knockdownButton;
-	public Transform shotSpawn;
-    public Button charges;
-    private GameObject CurrentShot;
-	public float fireRate;
+    public GameObject knockdown;
 
-	private float nextFire;
+    public Button slowButton;
+    public Button knockdownButton;
+    public Button knockcharges;
+    public Button charges;
+
+    private GameObject CurrentShot;
+    private GameObject blockType;
+
     private int blockCharges = 5;
+    private int knockblockCharges = 3;
     private bool charging = false;
 
 //	private Rigidbody2D rb2d;
@@ -39,21 +45,15 @@ public class PrincessController : MonoBehaviour {
 		}
 
 		if (Input.GetMouseButtonDown (1) && blockCharges>0) {
-			nextFire = Time.time + fireRate;
-
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
+			
+            if(blockType == block)
             {
-                Instantiate(block, hit.point, Quaternion.identity);
+                if (blockCharges > 0)
+                {
+                    PlaceBlock();
+                    blockCharges -= 1;
+                }
             }
-            //Vector3 screenPoint = Input.mousePosition;
-            //screenPoint.z = 20.0f; //distance of the plane from the camera
-            //screenPoint = Camera.main.ScreenToWorldPoint(screenPoint);
-            //Instantiate(block, screenPoint, shotSpawn.rotation);
-            blockCharges -= 1;
-            charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
-
         }
 
         if(blockCharges<5 &&  charging == false)
@@ -90,11 +90,24 @@ public class PrincessController : MonoBehaviour {
         }
     }
 
-    IEnumerator RestoreCharges()
+    void PlaceBlock()
+    {
+        nextFire = Time.time + fireRate;
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            Instantiate(blockType, hit.point, Quaternion.identity);
+        }
+        blockCharges -= 1;
+        charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
+    }
+
+    IEnumerator RestoreCharges(chargetype)
     {
         charging = true;
         yield return new WaitForSeconds(5);
-        blockCharges += 1;
+        chargetype += 1;
         charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
         charging = false;
     }
