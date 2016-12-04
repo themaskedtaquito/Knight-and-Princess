@@ -29,15 +29,16 @@ public class PrincessController : MonoBehaviour {
 //	private Rigidbody2D rb2d;
 
 	void Start(){
-        //		rb2d = GetComponent<Rigidbody2D> ();
+//        rb2d = GetComponent<Rigidbody2D> ();
         CurrentShot = slow;
         slowButton.image.color = new Color(0, 176, 9);
         slowButton.onClick.AddListener(ToggleProjectiles);
         knockdownButton.onClick.AddListener(ToggleProjectiles);
     }
-	void Update() {
+	void FixedUpdate() {
 		float h = speed * Input.GetAxis("Mouse ScrollWheel");
 		transform.Translate(h, 0, 0);
+
 
 		if (Input.GetMouseButton (0) && Time.time > nextFire) { //need to add conditional so that it does not fire if click is on UI button
 			nextFire = Time.time + fireRate;
@@ -103,11 +104,11 @@ public class PrincessController : MonoBehaviour {
         charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
     }
 
-    IEnumerator RestoreCharges(chargetype)
+    IEnumerator RestoreCharges()
     {
         charging = true;
         yield return new WaitForSeconds(5);
-        chargetype += 1;
+		blockCharges += 1;
         charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
         charging = false;
     }

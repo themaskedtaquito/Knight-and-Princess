@@ -5,6 +5,8 @@ public class KnightControls : MonoBehaviour {
     public GameObject currentPlatform;
     public Transform groundCheck;
     public MovePlatform MovePlatform;
+
+	public GameObject sword;
     
 
     public float jumpForce = 500;
@@ -15,6 +17,10 @@ public class KnightControls : MonoBehaviour {
     private Collider2D c;
     private bool grounded = true;
     private bool jump = false;
+
+//	private bool armed = false;
+
+	bool facingLeft = true;
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -30,26 +36,54 @@ public class KnightControls : MonoBehaviour {
         {
             jump = true;
         }
+
+		if (Input.GetKeyDown(KeyCode.S))
+		{
+//			armed = true;
+			sword.tag = "Sword";
+		}
+		if (Input.GetKeyUp (KeyCode.S)) {
+//			armed = false;
+			sword.tag = "Untagged";
+		}
+
     }
 
     void FixedUpdate()
     {
         float direction = Input.GetAxis("Horizontal");
 
-        if (rb.velocity.x * direction < maxSpeed)
-        {
-            rb.AddForce(Vector2.right * direction * moveForce);
-        }
-        if (Mathf.Abs(rb.velocity.x) > maxSpeed)
-        {
-            rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x) * maxSpeed, rb.velocity.y); //.Sign() returns either 1 or -1
-        }
+		rb.velocity = new Vector2 (direction * maxSpeed, rb.velocity.y);
+
+		if (direction < 0 && !facingLeft) {
+			Flip ();
+		} else if (direction > 0 && facingLeft) {
+			Flip ();
+		}
+
+//        if (rb.velocity.x * direction < maxSpeed)
+//        {
+//            rb.AddForce(Vector2.right * direction * moveForce);
+//        }
+//        if (Mathf.Abs(rb.velocity.x) > maxSpeed)
+//        {
+//            rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x) * maxSpeed, rb.velocity.y); //.Sign() returns either 1 or -1
+//        }
         if (jump == true)
         {
             rb.AddForce(new Vector2(0f, jumpForce));
             jump = false;
         }
+
+
     }
+		
+	void Flip(){
+		facingLeft = !facingLeft;
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
 
     void OnCollisionEnter2D(Collision2D col)
     {

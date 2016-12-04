@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/PrincessCooldowns_Mari.unity
+- path: Assets/Scenes/TwoPlayerMechanics.unity
   isLoaded: 1
   isActive: 1
