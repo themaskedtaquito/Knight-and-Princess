@@ -24,7 +24,7 @@ GameObject:
   - 61: {fileID: 61000012508210866}
   m_Layer: 9
   m_Name: Sword
-  m_TagString: Sword
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,6 +236,7 @@ MonoBehaviour:
   currentPlatform: {fileID: 0}
   groundCheck: {fileID: 4000012568242392}
   MovePlatform: {fileID: 0}
+  sword: {fileID: 1000010471832616}
   jumpForce: 1100
   moveForce: 200
   maxSpeed: 7

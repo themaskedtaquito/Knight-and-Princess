@@ -25,47 +25,77 @@ public class PrincessController : MonoBehaviour {
     private int blockCharges = 5;
     private int knockblockCharges = 3;
     private bool charging = false;
+    private bool charging2 = false;
 
-//	private Rigidbody2D rb2d;
+    //	private Rigidbody2D rb2d;
 
-	void Start(){
+    void Start(){
 //        rb2d = GetComponent<Rigidbody2D> ();
         CurrentShot = slow;
+        blockType = block;
         slowButton.image.color = new Color(0, 176, 9);
+        charges.image.color = new Color(0, 176, 9);
         slowButton.onClick.AddListener(ToggleProjectiles);
         knockdownButton.onClick.AddListener(ToggleProjectiles);
+        charges.onClick.AddListener(ToggleBlocks);
+        knockcharges.onClick.AddListener(ToggleBlocks);
     }
-	void FixedUpdate() {
-		float h = speed * Input.GetAxis("Mouse ScrollWheel");
-		transform.Translate(h, 0, 0);
 
-
-		if (Input.GetMouseButton (0) && Time.time > nextFire) { //need to add conditional so that it does not fire if click is on UI button
-			nextFire = Time.time + fireRate;
-			Instantiate (CurrentShot, shotSpawn.position, shotSpawn.rotation);
-		}
-
-		if (Input.GetMouseButtonDown (1) && blockCharges>0) {
-			
-            if(blockType == block)
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            Debug.Log(blockType);
+            if (blockType == block)
             {
                 if (blockCharges > 0)
                 {
                     PlaceBlock();
                     blockCharges -= 1;
+                    charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
+                }
+            }
+            else
+            {
+                if (knockblockCharges > 0)
+                {
+                    PlaceBlock();
+                    knockblockCharges -= 1;
+                    knockcharges.GetComponentInChildren<Text>().text = knockblockCharges.ToString();
                 }
             }
         }
-
-        if(blockCharges<5 &&  charging == false)
-        {
-            StartCoroutine("RestoreCharges");
-        }
-
         if (Input.GetMouseButtonDown(2))
         {
             ToggleProjectiles();
-        }	
+        }
+
+        if (blockCharges < 5 && charging == false)
+        {
+            StartCoroutine("RestoreCharges");
+        }
+        if (knockblockCharges < 3 && charging2 == false)
+        {
+            StartCoroutine("RestoreTrapCharges");
+        }
+    }
+
+	void FixedUpdate() {
+		float h = speed * Input.GetAxis("Mouse ScrollWheel");
+		transform.Translate(h, 0, 0);
+
+		if (Input.GetMouseButton (0) && Time.time > nextFire) {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                if(hit.collider.gameObject.layer != 5)
+                {
+                    nextFire = Time.time + fireRate;
+                    Instantiate(CurrentShot, shotSpawn.position, shotSpawn.rotation);
+                }
+            }            
+		}
 
 //		float moveH = Input.GetAxis ("Mouse ScrollWheel");
 //
@@ -91,17 +121,31 @@ public class PrincessController : MonoBehaviour {
         }
     }
 
-    void PlaceBlock()
+    void ToggleBlocks()
     {
-        nextFire = Time.time + fireRate;
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
+        if (blockType == block)
         {
-            Instantiate(blockType, hit.point, Quaternion.identity);
+            charges.image.color = new Color(255, 255, 255);
+            knockcharges.image.color = new Color(0, 176, 9);
+            blockType = knockblock;
         }
-        blockCharges -= 1;
-        charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
+        else
+        {
+            knockcharges.image.color = new Color(255, 255, 255);
+            charges.image.color = new Color(0, 176, 9);
+            blockType = block;
+        }
+    }
+
+    void PlaceBlock() //to need make it so that blocks can't be placed overlapping
+    {
+            nextFire = Time.time + fireRate;
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                Instantiate(blockType, hit.point, Quaternion.identity);
+            }     
     }
 
     IEnumerator RestoreCharges()
@@ -111,5 +155,14 @@ public class PrincessController : MonoBehaviour {
 		blockCharges += 1;
         charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
         charging = false;
+    }
+
+    IEnumerator RestoreTrapCharges()
+    {
+        charging2 = true;
+        yield return new WaitForSeconds(5);
+        knockblockCharges += 1;
+        knockcharges.GetComponentInChildren<Text>().text = knockblockCharges.ToString();
+        charging2 = false;
     }
 }

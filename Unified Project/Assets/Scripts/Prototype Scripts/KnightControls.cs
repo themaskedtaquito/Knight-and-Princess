@@ -4,7 +4,6 @@ using System.Collections;
 public class KnightControls : MonoBehaviour {
     public GameObject currentPlatform;
     public Transform groundCheck;
-    public MovePlatform MovePlatform;
 
 	public GameObject sword;
     
@@ -89,7 +88,6 @@ public class KnightControls : MonoBehaviour {
     {
         if (col.gameObject.CompareTag("ground") && col.gameObject != currentPlatform)
         {
-            MovePlatform.movePlatform();
             currentPlatform = col.gameObject;
         }
 
@@ -114,7 +112,6 @@ public class KnightControls : MonoBehaviour {
         if (other.gameObject.CompareTag("ground") && other.gameObject != currentPlatform)
         {
             c.isTrigger = false;
-            MovePlatform.movePlatform();
         }
     }
 
