@@ -6,7 +6,6 @@ public class KnightControls : MonoBehaviour {
     public Transform groundCheck;
 
 	public GameObject sword;
-    
 
     public float jumpForce = 500;
     public float moveForce = 200f;
@@ -100,7 +99,6 @@ public class KnightControls : MonoBehaviour {
         if (col.gameObject.CompareTag("KnockDown"))
         {
             c.isTrigger = true;
-            
             Destroy(col.gameObject);
         }
 

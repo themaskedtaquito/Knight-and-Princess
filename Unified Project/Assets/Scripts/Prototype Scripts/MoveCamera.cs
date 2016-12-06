@@ -14,7 +14,6 @@ public class MoveCamera : MonoBehaviour {
 	void Update()
     {
         diff = transform.position.y - knight.transform.position.y;
-        Debug.Log(diff);
         if(diff < 12|| diff>offset)
         {
             Vector3 move;

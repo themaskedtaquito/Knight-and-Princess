@@ -45,7 +45,6 @@ public class PrincessController : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(1))
         {
-            Debug.Log(blockType);
             if (blockType == block)
             {
                 if (blockCharges > 0)
@@ -91,6 +90,7 @@ public class PrincessController : MonoBehaviour {
             {
                 if(hit.collider.gameObject.layer != 5)
                 {
+                    Debug.Log(hit.collider.gameObject.layer);
                     nextFire = Time.time + fireRate;
                     Instantiate(CurrentShot, shotSpawn.position, shotSpawn.rotation);
                 }
