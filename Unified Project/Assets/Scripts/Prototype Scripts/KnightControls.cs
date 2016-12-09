@@ -4,7 +4,6 @@ using System.Collections;
 public class KnightControls : MonoBehaviour {
     public GameObject currentPlatform;
     public Transform groundCheck;
-
 	public GameObject sword;
 
     public float jumpForce = 500;
@@ -101,8 +100,7 @@ public class KnightControls : MonoBehaviour {
             c.isTrigger = true;
             Destroy(col.gameObject);
         }
-
-        
+ 
     }
 
     void OnTriggerEnter2D(Collider2D other)

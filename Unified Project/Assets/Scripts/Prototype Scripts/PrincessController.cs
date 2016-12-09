@@ -8,6 +8,7 @@ public class PrincessController : MonoBehaviour {
     public float fireRate;
     private float nextFire;
     public Transform shotSpawn;
+    public GameController gameControls;
 
     public GameObject block;
     public GameObject knockblock;
@@ -102,6 +103,16 @@ public class PrincessController : MonoBehaviour {
 //		Vector2 movement = new Vector2 (moveH, 0);
 //		rb2d.AddForce (movement * speed);
 	}
+
+    void OnCollisionEnter(Collision col)
+    {
+        Debug.Log(col.gameObject);
+        if (col.gameObject.CompareTag("Player"))
+        {
+            gameControls.KnightWin();
+        }
+
+    }
 
     void ToggleProjectiles()
     {

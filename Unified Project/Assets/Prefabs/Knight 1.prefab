@@ -97,8 +97,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013388058790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3196, y: -0.15086, z: 0}
-  m_LocalScale: {x: 0.40828055, y: 2.0150003, z: 1}
+  m_LocalPosition: {x: -6.4, y: -1.45, z: 0}
+  m_LocalScale: {x: 0.6095488, y: 3.1736236, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000012568242392}
@@ -190,7 +190,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -235,7 +235,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlatform: {fileID: 0}
   groundCheck: {fileID: 4000012568242392}
-  MovePlatform: {fileID: 0}
   sword: {fileID: 1000010471832616}
   jumpForce: 1100
   moveForce: 200
