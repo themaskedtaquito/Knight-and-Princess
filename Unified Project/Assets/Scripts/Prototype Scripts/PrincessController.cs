@@ -104,16 +104,6 @@ public class PrincessController : MonoBehaviour {
 //		rb2d.AddForce (movement * speed);
 	}
 
-    void OnCollisionEnter(Collision col)
-    {
-        Debug.Log(col.gameObject);
-        if (col.gameObject.CompareTag("Player"))
-        {
-            gameControls.KnightWin();
-        }
-
-    }
-
     void ToggleProjectiles()
     {
         if (CurrentShot == slow)

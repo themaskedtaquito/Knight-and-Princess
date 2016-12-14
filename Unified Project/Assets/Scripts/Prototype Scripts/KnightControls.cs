@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class KnightControls : MonoBehaviour {
+    public GameController gameController;
     public GameObject currentPlatform;
     public Transform groundCheck;
 	public GameObject sword;
@@ -84,6 +85,7 @@ public class KnightControls : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        Debug.Log(col.gameObject);
         if (col.gameObject.CompareTag("ground") && col.gameObject != currentPlatform)
         {
             currentPlatform = col.gameObject;
@@ -99,6 +101,11 @@ public class KnightControls : MonoBehaviour {
         {
             c.isTrigger = true;
             Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.CompareTag("MainCamera"))
+        {
+            gameController.KnightWin();
         }
  
     }

@@ -18,7 +18,18 @@ public class GameController : MonoBehaviour {
 	void Update () {
         if (timebank > 0)
         {
-            timer.text = timebank + " seconds remaining";
+            if (timebank < 60)
+            {
+                timer.text = "0:" + timebank;
+            }
+            else if (timebank<120)
+            {
+                timer.text = "1:" + (timebank - 60);
+            }
+            else
+            {
+                timer.text = "2:" + (timebank - 120);
+            }
         }
         else
         {
