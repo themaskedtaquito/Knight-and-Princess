@@ -93,20 +93,16 @@ public class PrincessController : MonoBehaviour {
 		PrincessAnimator.SetFloat ("speed", Mathf.Abs(h));
 
 		if (Input.GetMouseButton (0) && Time.time > nextFire) {
-			// play animation on key press, use state name
-			// PrincessAnimator.Play ("throw");
-
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
-            {
-                if(hit.collider.gameObject.layer != 5)
-                {
-                    Debug.Log(hit.collider.gameObject.layer);
+            // play animation on key press, use state name
+            // PrincessAnimator.Play ("throw");
+            //if (Physics.Raycast(ray, out hit))
+            //{
+                //if(hit.collider.gameObject.layer != 5)
+                //{
                     nextFire = Time.time + fireRate;
                     Instantiate(CurrentShot, shotSpawn.position, shotSpawn.rotation);
-                }
-            }
+            //    }
+            //}
 		}
 
 //		float moveH = Input.GetAxis ("Mouse ScrollWheel");
@@ -152,12 +148,10 @@ public class PrincessController : MonoBehaviour {
     void PlaceBlock() //to need make it so that blocks can't be placed overlapping
     {
             nextFire = Time.time + fireRate;
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
-            {
-                Instantiate(blockType, hit.point, Quaternion.identity);
-            }     
+
+        Vector3 screenPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        screenPoint.z = 1;
+        Instantiate(blockType,screenPoint, Quaternion.identity); 
     }
 
     IEnumerator RestoreCharges()

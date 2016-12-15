@@ -31,14 +31,8 @@ public class KnightControls : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
-        {
-            jump = true;
-        }
-
-		if (Input.GetKeyDown(KeyCode.S))
+		if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
 		{
 //			armed = true;
 			sword.tag = "Sword";
@@ -55,6 +49,13 @@ public class KnightControls : MonoBehaviour {
 
     void FixedUpdate()
     {
+        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        {
+            jump = true;
+        }
+
         float direction = Input.GetAxis("Horizontal");
 
 //		float h = direction * maxSpeed;
@@ -97,7 +98,6 @@ public class KnightControls : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log(col.gameObject);
         if (col.gameObject.CompareTag("ground") && col.gameObject != currentPlatform)
         {
             currentPlatform = col.gameObject;
