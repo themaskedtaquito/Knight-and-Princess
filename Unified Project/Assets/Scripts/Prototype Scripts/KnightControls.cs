@@ -1,11 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+[System.Serializable]
+
+public class Boundary
+{
+    public float xMin, xMax;
+}
 
 public class KnightControls : MonoBehaviour {
     public GameController gameController;
     public GameObject currentPlatform;
     public Transform groundCheck;
 	public GameObject sword;
+    public Boundary boundary;
 
     public float jumpForce = 500;
     public float moveForce = 200f;
@@ -85,6 +92,12 @@ public class KnightControls : MonoBehaviour {
 			// KnightAnimator.Play ("jump");
             jump = false;
         }
+        rb.position = new Vector3
+        (
+            Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
+            rb.transform.position.y,
+             rb.transform.position.z
+        );
 
 
     }

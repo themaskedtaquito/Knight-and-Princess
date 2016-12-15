@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
-    private int timebank = 150;
+    private int timebank = 75;
     public Text timer;
     public GameObject timeUp;
     public GameObject knight;
@@ -18,13 +18,25 @@ public class GameController : MonoBehaviour {
 	void Update () {
         if (timebank > 0)
         {
-            if (timebank < 60)
+            if (timebank < 10)
+            {
+                timer.text = "0:0" + timebank;
+            }
+            else if (timebank < 60)
             {
                 timer.text = "0:" + timebank;
             }
-            else if (timebank<120)
+            else if (timebank < 70)
             {
-                timer.text = "1:" + (timebank - 60);
+                timer.text = "1:0" + (timebank-60);
+            }
+            else if (timebank < 120)
+            {
+                timer.text = "1:" + (timebank-60);
+            }
+            else if (timebank<130)
+            {
+                timer.text = "2:0" + (timebank - 120);
             }
             else
             {

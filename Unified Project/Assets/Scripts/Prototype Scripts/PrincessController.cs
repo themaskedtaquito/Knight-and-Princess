@@ -7,9 +7,10 @@ public class PrincessController : MonoBehaviour {
 	public float speed;
     public float fireRate;
     private float nextFire;
+    private Rigidbody2D rb;
     public Transform shotSpawn;
     public GameController gameControls;
-
+    public Boundary boundary;
     public GameObject block;
     public GameObject knockblock;
 	public GameObject slow;
@@ -28,10 +29,10 @@ public class PrincessController : MonoBehaviour {
     private bool charging = false;
     private bool charging2 = false;
 
-
 	private Animator PrincessAnimator;
 
     void Start(){
+        rb = GetComponent<Rigidbody2D>();
 		PrincessAnimator = GetComponent<Animator> ();
         CurrentShot = slow;
         blockType = block;
@@ -105,11 +106,18 @@ public class PrincessController : MonoBehaviour {
             //}
 		}
 
-//		float moveH = Input.GetAxis ("Mouse ScrollWheel");
-//
-//		Vector2 movement = new Vector2 (moveH, 0);
-//		rb2d.AddForce (movement * speed);
-	}
+        //		float moveH = Input.GetAxis ("Mouse ScrollWheel");
+        //
+        //		Vector2 movement = new Vector2 (moveH, 0);
+        //		rb2d.AddForce (movement * speed);
+
+        rb.position = new Vector3
+        (
+            Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
+             rb.transform.position.y,
+             rb.transform.position.z
+        );
+    }
 
     void ToggleProjectiles()
     {
