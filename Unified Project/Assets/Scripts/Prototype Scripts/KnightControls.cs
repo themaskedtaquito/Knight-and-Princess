@@ -16,11 +16,14 @@ public class KnightControls : MonoBehaviour {
     private bool grounded = true;
     private bool jump = false;
 
+	private Animator KnightAnimator;
+
 //	private bool armed = false;
 
 	bool facingLeft = true;
 	// Use this for initialization
 	void Start () {
+		KnightAnimator = GetComponent<Animator> ();
         rb = GetComponent<Rigidbody2D>();
         c = GetComponent<Collider2D>();
 	}
@@ -39,6 +42,9 @@ public class KnightControls : MonoBehaviour {
 		{
 //			armed = true;
 			sword.tag = "Sword";
+			// play animation on key press, use state name
+			// KnightAnimator.Play ("sword");
+
 		}
 		if (Input.GetKeyUp (KeyCode.S)) {
 //			armed = false;
@@ -51,7 +57,11 @@ public class KnightControls : MonoBehaviour {
     {
         float direction = Input.GetAxis("Horizontal");
 
+//		float h = direction * maxSpeed;
+
 		rb.velocity = new Vector2 (direction * maxSpeed, rb.velocity.y);
+
+		KnightAnimator.SetFloat ("speed", rb.velocity.x); //if this doesn't work use h
 
 		if (direction < 0 && !facingLeft) {
 			Flip ();
@@ -70,6 +80,8 @@ public class KnightControls : MonoBehaviour {
         if (jump == true)
         {
             rb.AddForce(new Vector2(0f, jumpForce));
+			// play animation on key press, use state name
+			// KnightAnimator.Play ("jump");
             jump = false;
         }
 

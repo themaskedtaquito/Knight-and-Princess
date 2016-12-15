@@ -28,10 +28,11 @@ public class PrincessController : MonoBehaviour {
     private bool charging = false;
     private bool charging2 = false;
 
-    //	private Rigidbody2D rb2d;
+
+	private Animator PrincessAnimator;
 
     void Start(){
-//        rb2d = GetComponent<Rigidbody2D> ();
+		PrincessAnimator = GetComponent<Animator> ();
         CurrentShot = slow;
         blockType = block;
         slowButton.image.color = new Color(0, 176, 9);
@@ -40,12 +41,17 @@ public class PrincessController : MonoBehaviour {
         knockdownButton.onClick.AddListener(ToggleProjectiles);
         charges.onClick.AddListener(ToggleBlocks);
         knockcharges.onClick.AddListener(ToggleBlocks);
+
+
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(1))
         {
+			// play animation on key press, use state name
+//			PrincessAnimator.Play ("throw");
+
             if (blockType == block)
             {
                 if (blockCharges > 0)
@@ -64,6 +70,7 @@ public class PrincessController : MonoBehaviour {
                     knockcharges.GetComponentInChildren<Text>().text = knockblockCharges.ToString();
                 }
             }
+				
         }
         if (Input.GetMouseButtonDown(2))
         {
@@ -83,8 +90,12 @@ public class PrincessController : MonoBehaviour {
 	void FixedUpdate() {
 		float h = speed * Input.GetAxis("Mouse ScrollWheel");
 		transform.Translate(h, 0, 0);
+		PrincessAnimator.SetFloat ("speed", Mathf.Abs(h));
 
 		if (Input.GetMouseButton (0) && Time.time > nextFire) {
+			// play animation on key press, use state name
+			// PrincessAnimator.Play ("throw");
+
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
@@ -95,7 +106,7 @@ public class PrincessController : MonoBehaviour {
                     nextFire = Time.time + fireRate;
                     Instantiate(CurrentShot, shotSpawn.position, shotSpawn.rotation);
                 }
-            }            
+            }
 		}
 
 //		float moveH = Input.GetAxis ("Mouse ScrollWheel");
