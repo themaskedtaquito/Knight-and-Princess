@@ -111,6 +111,7 @@ public class KnightControls : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        Debug.Log("Collision!");
         if (col.gameObject.CompareTag("ground") && col.gameObject != currentPlatform)
         {
             currentPlatform = col.gameObject;
@@ -127,12 +128,6 @@ public class KnightControls : MonoBehaviour {
             c.isTrigger = true;
             Destroy(col.gameObject);
         }
-
-        if (col.gameObject.CompareTag("MainCamera"))
-        {
-            gameController.KnightWin();
-        }
- 
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -140,6 +135,10 @@ public class KnightControls : MonoBehaviour {
         if (other.gameObject.CompareTag("ground") && other.gameObject != currentPlatform)
         {
             c.isTrigger = false;
+        }
+        if (other.gameObject.CompareTag("Player"))
+        {
+            gameController.KnightWin();
         }
     }
 
