@@ -2907,7 +2907,7 @@ MonoBehaviour:
   groundzero: {fileID: 1248990781}
   boundary:
     xMin: -42
-    xMax: 39
+    xMax: 40
   jumpForce: 1150
   moveForce: 200
   maxSpeed: 10
@@ -5085,7 +5085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1639336739
 AudioSource:
   m_ObjectHideFlags: 0

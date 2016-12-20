@@ -19,7 +19,7 @@ public class MenuController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void StartGame () {
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("Narrative");
     }
     void Quit()
     {
