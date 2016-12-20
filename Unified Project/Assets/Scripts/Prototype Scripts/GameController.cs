@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
-    private int timebank = 75;
+    private int timebank = 150;
     public Text timer;
     public GameObject timeUp;
     public GameObject knight;
