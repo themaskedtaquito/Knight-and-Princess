@@ -11,6 +11,7 @@ public class KnightControls : MonoBehaviour {
     public GameController gameController;
     public GameObject currentPlatform;
     public Transform groundCheck;
+    public GameObject groundzero;
 //	public GameObject sword;
     public Boundary boundary;
 
@@ -119,7 +120,7 @@ public class KnightControls : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("Collision!");
+
         if (col.gameObject.CompareTag("ground") && col.gameObject != currentPlatform)
         {
             currentPlatform = col.gameObject;
@@ -127,13 +128,18 @@ public class KnightControls : MonoBehaviour {
 
         if (col.gameObject.CompareTag("Slow"))
         {
-            maxSpeed = 3;
+            maxSpeed = 2;
             StartCoroutine("RestoreSpeed");
             Destroy(col.gameObject);
         }
         if (col.gameObject.CompareTag("KnockDown"))
         {
-            c.isTrigger = true;
+            if (currentPlatform != groundzero)
+            {
+                c.isTrigger = true;
+                maxSpeed = 3;
+                StartCoroutine("RestoreSpeed");
+            }
             Destroy(col.gameObject);
         }
     }
@@ -141,8 +147,8 @@ public class KnightControls : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("ground") && other.gameObject != currentPlatform)
-        {
-            c.isTrigger = false;
+        {          
+                c.isTrigger = false;
         }
         if (other.gameObject.CompareTag("Player"))
         {
