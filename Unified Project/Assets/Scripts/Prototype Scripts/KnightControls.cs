@@ -79,6 +79,7 @@ public class KnightControls : MonoBehaviour {
 		rb.velocity = new Vector2 (direction * maxSpeed, rb.velocity.y);
 
 		KnightAnimator.SetFloat ("Speed", rb.velocity.x); //if this doesn't work use h
+		Debug.Log(rb.velocity.x);
 
 		if (direction < 0 && !facingLeft) {
 			Flip ();
