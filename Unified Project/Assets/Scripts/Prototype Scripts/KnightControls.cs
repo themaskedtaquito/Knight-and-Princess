@@ -119,7 +119,7 @@ public class KnightControls : MonoBehaviour {
 
         if (col.gameObject.CompareTag("Slow"))
         {
-            maxSpeed = 0.3f;
+            maxSpeed = 3f;
             StartCoroutine("RestoreSpeed");
             Destroy(col.gameObject);
         }
@@ -145,7 +145,7 @@ public class KnightControls : MonoBehaviour {
     IEnumerator RestoreSpeed()
     {
         // restore speed to normal after x seconds
-        yield return new WaitForSeconds(2.5f);
-        maxSpeed = 7;
+        yield return new WaitForSeconds(2);
+        maxSpeed = 10;
     }
 }
