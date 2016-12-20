@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 70e1848fadcab439ba5977e5d518f6cb
+timeCreated: 1482227005
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: knightSword_00000
+    21300002: knightSword_00001
+    21300004: knightSword_00002
+    21300006: knightSword_00003
+    21300008: knightSword_00004
+    21300010: knightSword_00005
+    21300012: knightSword_00006
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 20
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: knightSword_00000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 128
+        width: 83
+        height: 130
+      alignment: 9
+      pivot: {x: 0.61445785, y: 0.22307692}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: knightSword_00001
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2
+        width: 80
+        height: 124
+      alignment: 9
+      pivot: {x: 0.6, y: 0.23387097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: knightSword_00002
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 386
+        width: 122
+        height: 125
+      alignment: 9
+      pivot: {x: 0.73770493, y: 0.232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: knightSword_00003
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 260
+        width: 104
+        height: 124
+      alignment: 9
+      pivot: {x: 0.6923077, y: 0.23387097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: knightSword_00004
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 386
+        width: 122
+        height: 125
+      alignment: 9
+      pivot: {x: 0.73770493, y: 0.232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: knightSword_00005
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2
+        width: 80
+        height: 124
+      alignment: 9
+      pivot: {x: 0.6, y: 0.23387097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: knightSword_00006
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 128
+        width: 83
+        height: 130
+      alignment: 9
+      pivot: {x: 0.61445785, y: 0.22307692}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

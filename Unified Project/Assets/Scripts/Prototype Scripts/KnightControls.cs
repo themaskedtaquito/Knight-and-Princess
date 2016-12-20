@@ -11,7 +11,7 @@ public class KnightControls : MonoBehaviour {
     public GameController gameController;
     public GameObject currentPlatform;
     public Transform groundCheck;
-	public GameObject sword;
+//	public GameObject sword;
     public Boundary boundary;
 
     public float jumpForce = 500;
@@ -51,19 +51,20 @@ public class KnightControls : MonoBehaviour {
 			KnightAnimator.SetBool ("Ground", false);
 		}
 
-        if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
-		{
-//			armed = true;
-			sword.tag = "Sword";
-			// play animation on key press, use state name
-			 KnightAnimator.Play ("knight_chop");
-
-		}
-		if (Input.GetKeyUp (KeyCode.LeftShift)||Input.GetKeyUp(KeyCode.RightShift)) {
-//			armed = false;
-			sword.tag = "Untagged";
-		}
-
+//        if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
+//		{
+////			armed = true;
+////			sword.tag = "Sword";
+//			// play animation on key press, use state name
+////			KnightAnimator.SetBool ("Armed", true);
+//
+//		}
+//		if (Input.GetKeyUp (KeyCode.LeftShift)||Input.GetKeyUp(KeyCode.RightShift)) {
+////			armed = false;
+////			sword.tag = "Untagged";
+////			KnightAnimator.SetBool ("Armed", false);
+//		}
+//
     }
 
     void FixedUpdate()
