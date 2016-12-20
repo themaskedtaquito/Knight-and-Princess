@@ -146,7 +146,7 @@ public class KnightControls : MonoBehaviour {
         }
         if (other.gameObject.CompareTag("Player"))
         {
-            gameController.KnightWin();
+            gameController.StartCoroutine("KnightWin");
         }
     }
 

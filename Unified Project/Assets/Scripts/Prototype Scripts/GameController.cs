@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
     public Text timer;
     public GameObject timeUp;
     public GameObject knight;
+    public GameObject princess;
 	// Use this for initialization
 	void Start () {
 
@@ -57,13 +58,17 @@ public class GameController : MonoBehaviour {
     IEnumerator PrincessWin()
     {
         knight.GetComponent<KnightControls>().enabled = false;
+        princess.GetComponent<PrincessController>().enabled = false;
         timeUp.SetActive(true);
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("PrincessWin");
     }
 
-    public void KnightWin()
+    public IEnumerator KnightWin()
     {
+        knight.GetComponent<KnightControls>().enabled = false;
+        princess.GetComponent<PrincessController>().enabled = false;
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene("KnightWin");
     }
 }
