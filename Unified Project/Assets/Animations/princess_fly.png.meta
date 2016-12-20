@@ -1,0 +1,717 @@
+fileFormatVersion: 2
+guid: 956a016e1094649e1b0ede34a2d90e0b
+timeCreated: 1482205878
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: princess_fly_00000
+    21300002: princess_fly_00001
+    21300004: princess_fly_00002
+    21300006: princess_fly_00003
+    21300008: princess_fly_00004
+    21300010: princess_fly_00005
+    21300012: princess_fly_00006
+    21300014: princess_fly_00007
+    21300016: princess_fly_00008
+    21300018: princess_fly_00009
+    21300020: princess_fly_00010
+    21300022: princess_fly_00011
+    21300024: princess_fly_00012
+    21300026: princess_fly_00013
+    21300028: princess_fly_00014
+    21300030: princess_fly_00015
+    21300032: princess_fly_00016
+    21300034: princess_fly_00017
+    21300036: princess_fly_00018
+    21300038: princess_fly_00019
+    21300040: princess_fly_00020
+    21300042: princess_fly_00021
+    21300044: princess_fly_00022
+    21300046: princess_fly_00023
+    21300048: princess_fly_00024
+    21300050: princess_fly_00025
+    21300052: princess_fly_00026
+    21300054: princess_fly_00027
+    21300056: princess_fly_00028
+    21300058: princess_fly_00029
+    21300060: princess_fly_00030
+    21300062: princess_fly_00031
+    21300064: princess_fly_00032
+    21300066: princess_fly_00033
+    21300068: princess_fly_00034
+    21300070: princess_fly_00035
+    21300072: princess_fly_00036
+    21300074: princess_fly_00037
+    21300076: princess_fly_00038
+    21300078: princess_fly_00039
+    21300080: princess_fly_00040
+    21300082: princess_fly_00041
+    21300084: princess_fly_00042
+    21300086: princess_fly_00043
+    21300088: princess_fly_00044
+    21300090: princess_fly_00045
+    21300092: princess_fly_00046
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: princess_fly_00000
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 951
+        width: 255
+        height: 195
+      alignment: 9
+      pivot: {x: 0.49803922, y: 0.36923078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00001
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 1171
+        width: 256
+        height: 195
+      alignment: 9
+      pivot: {x: 0.5, y: 0.36923078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00002
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1129
+        width: 256
+        height: 203
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3546798}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00003
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1148
+        width: 256
+        height: 204
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3480392}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00004
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 1330
+        width: 256
+        height: 205
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00005
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 964
+        width: 256
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00006
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 715
+        width: 251
+        height: 198
+      alignment: 9
+      pivot: {x: 0.49003986, y: 0.35353535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00007
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 1132
+        width: 255
+        height: 196
+      alignment: 9
+      pivot: {x: 0.49803922, y: 0.35204083}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00008
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1354
+        width: 257
+        height: 183
+      alignment: 9
+      pivot: {x: 0.5019455, y: 0.37704918}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00009
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 1539
+        width: 262
+        height: 166
+      alignment: 9
+      pivot: {x: 0.5114504, y: 0.40963855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00010
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 1549
+        width: 263
+        height: 162
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.41975307}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00011
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1861
+        width: 263
+        height: 186
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.4139785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00012
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 1878
+        width: 263
+        height: 169
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.3964497}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00013
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 1878
+        width: 263
+        height: 169
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.3964497}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00014
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 1878
+        width: 263
+        height: 169
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.39053255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00015
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 1707
+        width: 263
+        height: 169
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.39053255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00016
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1877
+        width: 263
+        height: 170
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.3882353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00017
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1706
+        width: 263
+        height: 169
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.3846154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00018
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1515
+        width: 261
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5095785, y: 0.41040462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00019
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 1537
+        width: 262
+        height: 169
+      alignment: 9
+      pivot: {x: 0.5114504, y: 0.3964497}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00020
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 1368
+        width: 257
+        height: 179
+      alignment: 9
+      pivot: {x: 0.5019455, y: 0.424581}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00021
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 728
+        width: 252
+        height: 187
+      alignment: 9
+      pivot: {x: 0.4920635, y: 0.44919786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00022
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 739
+        width: 252
+        height: 191
+      alignment: 9
+      pivot: {x: 0.4920635, y: 0.4712042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00023
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 937
+        width: 252
+        height: 193
+      alignment: 9
+      pivot: {x: 0.4920635, y: 0.47668394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00024
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 756
+        width: 252
+        height: 193
+      alignment: 9
+      pivot: {x: 0.4920635, y: 0.47668394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00025
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1319
+        width: 257
+        height: 194
+      alignment: 9
+      pivot: {x: 0.5019455, y: 0.46907216}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00026
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1515
+        width: 261
+        height: 186
+      alignment: 9
+      pivot: {x: 0.48659003, y: 0.45698926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00027
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1339
+        width: 259
+        height: 174
+      alignment: 9
+      pivot: {x: 0.5057915, y: 0.41379312}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00028
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1166
+        width: 259
+        height: 171
+      alignment: 9
+      pivot: {x: 0.5212355, y: 0.42105263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00029
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1874
+        width: 263
+        height: 173
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.433526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00030
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1703
+        width: 263
+        height: 169
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.39053255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00031
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1695
+        width: 263
+        height: 169
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.39053255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00032
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 1708
+        width: 263
+        height: 168
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.39285713}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00033
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1690
+        width: 263
+        height: 169
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.3964497}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00034
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 1713
+        width: 263
+        height: 163
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.41104296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00035
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1866
+        width: 263
+        height: 181
+      alignment: 9
+      pivot: {x: 0.513308, y: 0.43093923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00036
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1543
+        width: 262
+        height: 161
+      alignment: 9
+      pivot: {x: 0.5114504, y: 0.42236024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00037
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1517
+        width: 261
+        height: 176
+      alignment: 9
+      pivot: {x: 0.5095785, y: 0.39204547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00038
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 915
+        width: 255
+        height: 194
+      alignment: 9
+      pivot: {x: 0.49803922, y: 0.3556701}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00039
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 962
+        width: 252
+        height: 207
+      alignment: 9
+      pivot: {x: 0.4920635, y: 0.33816424}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00040
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1314
+        width: 259
+        height: 201
+      alignment: 9
+      pivot: {x: 0.5057915, y: 0.3482587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00041
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1114
+        width: 256
+        height: 203
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3497537}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00042
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 1334
+        width: 257
+        height: 207
+      alignment: 9
+      pivot: {x: 0.5019455, y: 0.34299517}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00043
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1111
+        width: 256
+        height: 201
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35820895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00044
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 769
+        width: 255
+        height: 193
+      alignment: 9
+      pivot: {x: 0.49803922, y: 0.373057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00045
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 932
+        width: 255
+        height: 195
+      alignment: 9
+      pivot: {x: 0.49803922, y: 0.36923078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: princess_fly_00046
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 917
+        width: 255
+        height: 195
+      alignment: 9
+      pivot: {x: 0.49803922, y: 0.36923078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

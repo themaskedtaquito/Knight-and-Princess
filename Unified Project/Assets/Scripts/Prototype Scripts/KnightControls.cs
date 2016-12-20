@@ -58,10 +58,17 @@ public class KnightControls : MonoBehaviour {
     {
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
-        {
-            jump = true;
-        }
+		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
+			jump = true;
+		} 
+
+		if (grounded == false) {
+			KnightAnimator.SetBool ("Ground", false);
+		} else {
+			KnightAnimator.SetBool ("Ground", true);
+		}
+			
+
 
         float direction = Input.GetAxis("Horizontal");
 
@@ -69,7 +76,7 @@ public class KnightControls : MonoBehaviour {
 
 		rb.velocity = new Vector2 (direction * maxSpeed, rb.velocity.y);
 
-		KnightAnimator.SetFloat ("speed", rb.velocity.x); //if this doesn't work use h
+		KnightAnimator.SetFloat ("Speed", rb.velocity.x); //if this doesn't work use h
 
 		if (direction < 0 && !facingLeft) {
 			Flip ();
