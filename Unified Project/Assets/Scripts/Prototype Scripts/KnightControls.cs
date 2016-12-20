@@ -38,8 +38,13 @@ public class KnightControls : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
-		if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        {
+            jump = true;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
 		{
 //			armed = true;
 			sword.tag = "Sword";
@@ -47,7 +52,7 @@ public class KnightControls : MonoBehaviour {
 			// KnightAnimator.Play ("sword");
 
 		}
-		if (Input.GetKeyUp (KeyCode.S)) {
+		if (Input.GetKeyUp (KeyCode.LeftShift)||Input.GetKeyUp(KeyCode.RightShift)) {
 //			armed = false;
 			sword.tag = "Untagged";
 		}
@@ -56,12 +61,7 @@ public class KnightControls : MonoBehaviour {
 
     void FixedUpdate()
     {
-        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
-        {
-            jump = true;
-        }
+        
 
         float direction = Input.GetAxis("Horizontal");
 
@@ -145,7 +145,7 @@ public class KnightControls : MonoBehaviour {
     IEnumerator RestoreSpeed()
     {
         // restore speed to normal after x seconds
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2.5);
         maxSpeed = 7;
     }
 }
