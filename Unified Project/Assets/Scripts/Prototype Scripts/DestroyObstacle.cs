@@ -23,9 +23,7 @@ public class DestroyObstacle : MonoBehaviour {
                 Destroy(gameObject);
                 if (trap)
                 {
-                    Debug.Log(other.gameObject.GetComponentInParent<Collider2D>().isTrigger);
                     other.gameObject.transform.parent.GetComponent<Collider2D>().isTrigger = true;
-                    Debug.Log(other.gameObject.GetComponentInParent<Collider2D>().isTrigger);
                 }
             }
         }
