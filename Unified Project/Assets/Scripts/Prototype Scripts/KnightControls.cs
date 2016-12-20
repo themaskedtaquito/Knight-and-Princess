@@ -145,7 +145,7 @@ public class KnightControls : MonoBehaviour {
     IEnumerator RestoreSpeed()
     {
         // restore speed to normal after x seconds
-        yield return new WaitForSeconds(2.5);
+        yield return new WaitForSeconds(2.5f);
         maxSpeed = 7;
     }
 }
