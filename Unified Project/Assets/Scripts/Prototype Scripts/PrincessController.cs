@@ -29,11 +29,11 @@ public class PrincessController : MonoBehaviour {
     private bool charging = false;
     private bool charging2 = false;
 
-	private Animator PrincessAnimator;
+//	private Animator PrincessAnimator;
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
-		PrincessAnimator = GetComponent<Animator> ();
+//		PrincessAnimator = GetComponent<Animator> ();
         CurrentShot = slow;
         blockType = block;
         slowButton.image.color = new Color(0, 176, 9);
@@ -50,8 +50,6 @@ public class PrincessController : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(1))
         {
-			// play animation on key press, use state name
-//			PrincessAnimator.Play ("throw");
 
             if (blockType == block)
             {
@@ -91,7 +89,8 @@ public class PrincessController : MonoBehaviour {
 	void FixedUpdate() {
 		float h = speed * Input.GetAxis("Mouse ScrollWheel");
 		transform.Translate(h, 0, 0);
-		PrincessAnimator.SetFloat ("speed", Mathf.Abs(h));
+
+//		PrincessAnimator.SetFloat ("Speed", Mathf.Abs(h));
 
 		if (Input.GetMouseButton (0) && Time.time > nextFire) {
             // play animation on key press, use state name

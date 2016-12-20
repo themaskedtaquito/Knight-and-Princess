@@ -16,7 +16,7 @@ public class KnightControls : MonoBehaviour {
 
     public float jumpForce = 500;
     public float moveForce = 200f;
-    public float maxSpeed = 7;
+    public float maxSpeed = 10;
 
     private Rigidbody2D rb;
     private Collider2D c;
@@ -44,12 +44,19 @@ public class KnightControls : MonoBehaviour {
         {
             jump = true;
         }
+
+		if (grounded == true) {
+			KnightAnimator.SetBool ("Ground", true);
+		} else {
+			KnightAnimator.SetBool ("Ground", false);
+		}
+
         if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
 		{
 //			armed = true;
 			sword.tag = "Sword";
 			// play animation on key press, use state name
-			// KnightAnimator.Play ("sword");
+			 KnightAnimator.Play ("knight_chop");
 
 		}
 		if (Input.GetKeyUp (KeyCode.LeftShift)||Input.GetKeyUp(KeyCode.RightShift)) {
@@ -69,7 +76,7 @@ public class KnightControls : MonoBehaviour {
 
 		rb.velocity = new Vector2 (direction * maxSpeed, rb.velocity.y);
 
-		KnightAnimator.SetFloat ("speed", rb.velocity.x); //if this doesn't work use h
+		KnightAnimator.SetFloat ("Speed", rb.velocity.x); //if this doesn't work use h
 
 		if (direction < 0 && !facingLeft) {
 			Flip ();
@@ -119,7 +126,7 @@ public class KnightControls : MonoBehaviour {
 
         if (col.gameObject.CompareTag("Slow"))
         {
-            maxSpeed = 0.3f;
+            maxSpeed = 3;
             StartCoroutine("RestoreSpeed");
             Destroy(col.gameObject);
         }
@@ -145,7 +152,7 @@ public class KnightControls : MonoBehaviour {
     IEnumerator RestoreSpeed()
     {
         // restore speed to normal after x seconds
-        yield return new WaitForSeconds(2.5);
-        maxSpeed = 7;
+        yield return new WaitForSeconds(2);
+        maxSpeed = 10;
     }
 }

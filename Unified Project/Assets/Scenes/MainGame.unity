@@ -2856,7 +2856,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f962217ab2530a0408080ae01cb37e3a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 370b39e798d6d2f47ad3dde9097c1892, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3320,17 +3320,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f8a93e637b44958b9acb85233ecf5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 8
   fireRate: 0.5
   shotSpawn: {fileID: 932752607}
   gameControls: {fileID: 1320395276}
   boundary:
     xMin: -50
     xMax: 23
-  block: {fileID: 1000014111630440, guid: dc240cfa5fd8a4ee28cce271d613a27a, type: 2}
-  knockblock: {fileID: 1000010154809618, guid: f5e2f707e4c68a449a4175965055324a, type: 2}
-  slow: {fileID: 1000011231776506, guid: dd36a6371e2928f4b9321e7d5115a04a, type: 2}
-  knockdown: {fileID: 1000013206422586, guid: 38de4cf73aeb57a45a9750e4b506dc07, type: 2}
+  block: {fileID: 0}
+  knockblock: {fileID: 0}
+  slow: {fileID: 0}
+  knockdown: {fileID: 0}
   slowButton: {fileID: 639841296}
   knockdownButton: {fileID: 754447862}
   knockcharges: {fileID: 459869394}
@@ -3375,8 +3375,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1027913013}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.52, y: 18.6, z: 10}
-  m_LocalScale: {x: 2.5961134, y: 2.0098104, z: 1}
+  m_LocalPosition: {x: -11.1, y: 20.4, z: 10}
+  m_LocalScale: {x: 3.5110266, y: 2.7181008, z: 1.3524165}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 932752607}
@@ -5936,10 +5936,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1985220806}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.98759556, y: 1.0540748, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.1198018, w: 0.99279785}
+  m_LocalPosition: {x: -0.892, y: 0.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 13.460001}
   m_Children: []
   m_Father: {fileID: 861058391}
   m_RootOrder: 0
@@ -5954,9 +5954,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.12899303, y: 0.92220783}
   serializedVersion: 2
-  m_Size: {x: 0.47, y: 1.84}
+  m_Size: {x: 0.37970462, y: 1.2920758}
 --- !u!1001 &2006297468
 Prefab:
   m_ObjectHideFlags: 0

@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 16d0fe21c82ce49c88575edad1c3873b
+timeCreated: 1482218698
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: knight_00000
+    21300002: knight_00001
+    21300004: knight_00002
+    21300006: knight_00003
+    21300008: knight_00004
+    21300010: knight_00005
+    21300012: knight_00006
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: knight_00000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 207
+        width: 217
+        height: 410
+      alignment: 9
+      pivot: {x: 0.5299539, y: 0.49268293}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: knight_00001
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 209
+        width: 224
+        height: 410
+      alignment: 9
+      pivot: {x: 0.54464287, y: 0.49268293}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: knight_00002
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 621
+        width: 234
+        height: 402
+      alignment: 9
+      pivot: {x: 0.5641026, y: 0.4950249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: knight_00003
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 619
+        width: 235
+        height: 404
+      alignment: 9
+      pivot: {x: 0.5659574, y: 0.49752474}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: knight_00004
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 621
+        width: 234
+        height: 402
+      alignment: 9
+      pivot: {x: 0.5641026, y: 0.4950249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: knight_00005
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 209
+        width: 224
+        height: 410
+      alignment: 9
+      pivot: {x: 0.54464287, y: 0.49268293}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: knight_00006
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 207
+        width: 217
+        height: 410
+      alignment: 9
+      pivot: {x: 0.5299539, y: 0.49268293}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
