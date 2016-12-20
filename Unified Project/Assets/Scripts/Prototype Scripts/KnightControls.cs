@@ -142,6 +142,10 @@ public class KnightControls : MonoBehaviour {
             }
             Destroy(col.gameObject);
         }
+        if (col.gameObject.CompareTag("Player"))
+        {
+            gameController.StartCoroutine("KnightWin");
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
