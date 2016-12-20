@@ -2,8 +2,9 @@
 using System.Collections;
 
 public class swordShow : MonoBehaviour {
-
-	public GameObject sword;
+    public float fireRate;
+    private float nextFire;
+    public GameObject sword;
 
 	// Use this for initialization
 	void Start () {
@@ -15,14 +16,22 @@ public class swordShow : MonoBehaviour {
 	
 		if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
 		{
-			gameObject.GetComponent<Renderer>().enabled = true;
-			sword.tag = "Sword";
+            if (Time.time > nextFire)
+            {
+                gameObject.GetComponent<Renderer>().enabled = true;
+                gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                sword.tag = "Sword";
+            }
 
-		}
+        }
 		if (Input.GetKeyUp (KeyCode.LeftShift)||Input.GetKeyUp(KeyCode.RightShift)) {
-
-			gameObject.GetComponent<Renderer>().enabled = false;
-			sword.tag = "Untagged";
-		}
+            if (Time.time > nextFire)
+            {
+                gameObject.GetComponent<Renderer>().enabled = false;
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                sword.tag = "Untagged";
+                nextFire = Time.time + fireRate;
+            }
+        }
 	}
 }

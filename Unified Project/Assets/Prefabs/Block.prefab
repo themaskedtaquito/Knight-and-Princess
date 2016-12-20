@@ -26,7 +26,7 @@ GameObject:
   - 114: {fileID: 114000013219100556}
   m_Layer: 8
   m_Name: Block
-  m_TagString: Destructable
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

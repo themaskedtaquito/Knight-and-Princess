@@ -97,10 +97,14 @@ public class PrincessController : MonoBehaviour {
             // PrincessAnimator.Play ("throw");
             //if (Physics.Raycast(ray, out hit))
             //{
-                //if(hit.collider.gameObject.layer != 5)
-                //{
-                    nextFire = Time.time + fireRate;
-                    Instantiate(CurrentShot, shotSpawn.position, shotSpawn.rotation);
+            //if(hit.collider.gameObject.layer != 5)
+            //{
+            Vector3 screenPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (screenPoint.x < 45)
+            {
+                nextFire = Time.time + fireRate;
+                Instantiate(CurrentShot, shotSpawn.position, shotSpawn.rotation);
+            }
             //    }
             //}
 		}
@@ -154,7 +158,7 @@ public class PrincessController : MonoBehaviour {
 
     void PlaceBlock() //to need make it so that blocks can't be placed overlapping
     {
-            nextFire = Time.time + fireRate;
+         nextFire = Time.time + fireRate;
 
         Vector3 screenPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         screenPoint.z = 1;

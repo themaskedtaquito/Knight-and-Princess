@@ -2885,7 +2885,7 @@ GameObject:
   - 61: {fileID: 861058394}
   m_Layer: 0
   m_Name: knight
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6160,7 +6160,7 @@ GameObject:
   - 114: {fileID: 1985220810}
   m_Layer: 0
   m_Name: sword
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6217,14 +6217,14 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1985220806}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -0.12899303, y: 0.92220783}
+  m_Offset: {x: -0.12899303, y: 0.9}
   serializedVersion: 2
-  m_Size: {x: 0.37970462, y: 1.2920758}
+  m_Size: {x: 0.53, y: 2.48}
 --- !u!114 &1985220810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6236,6 +6236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f06f46d8f6264224a71930a8836be83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireRate: 0.1
   sword: {fileID: 1985220806}
 --- !u!1001 &2006297468
 Prefab:
