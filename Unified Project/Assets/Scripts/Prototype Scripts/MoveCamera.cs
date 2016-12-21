@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MoveCamera : MonoBehaviour {
     public GameObject knight;
-    private float offset = 15.5f;
+    private float offset = 25.5f;
     private float diff;
 
 	// Use this for initialization
