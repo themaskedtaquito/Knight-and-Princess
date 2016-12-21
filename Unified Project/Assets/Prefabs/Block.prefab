@@ -24,7 +24,7 @@ GameObject:
   - 61: {fileID: 61000011428348184}
   - 50: {fileID: 50000012939987854}
   - 114: {fileID: 114000013219100556}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Block
   m_TagString: ground
   m_Icon: {fileID: 0}

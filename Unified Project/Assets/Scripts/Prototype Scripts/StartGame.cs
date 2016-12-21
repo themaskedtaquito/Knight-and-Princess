@@ -9,6 +9,13 @@ public class StartGame : MonoBehaviour {
         StartCoroutine("Begin");
 	}
 	
+    void Update()
+    {
+        if (Input.anyKey)
+        {
+            SceneManager.LoadScene("MainGame");
+        }
+    }
 	// Update is called once per frame
 	IEnumerator Begin()
     {

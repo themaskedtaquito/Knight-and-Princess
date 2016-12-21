@@ -122,11 +122,6 @@ public class KnightControls : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D col)
     {
 
-        if (col.gameObject.CompareTag("ground") && col.gameObject != currentPlatform)
-        {
-            currentPlatform = col.gameObject;
-        }
-
         if (col.gameObject.CompareTag("Slow"))
         {
             maxSpeed = 2;
@@ -158,6 +153,13 @@ public class KnightControls : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
         {
             gameController.StartCoroutine("KnightWin");
+        }
+    }
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("ground") && col.gameObject != currentPlatform)
+        {
+            currentPlatform = col.gameObject;
         }
     }
 

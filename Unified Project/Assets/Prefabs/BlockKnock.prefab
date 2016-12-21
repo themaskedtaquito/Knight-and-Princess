@@ -24,7 +24,7 @@ GameObject:
   - 61: {fileID: 61000012155553178}
   - 50: {fileID: 50000014023530622}
   - 114: {fileID: 114000010611209918}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: BlockKnock
   m_TagString: ground
   m_Icon: {fileID: 0}
