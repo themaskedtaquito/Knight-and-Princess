@@ -24,7 +24,7 @@ public class PrincessController : MonoBehaviour {
     private GameObject CurrentShot;
     private GameObject blockType;
 
-    private int blockCharges = 5;
+    private int blockCharges = 3;
     private int knockblockCharges = 3;
     private bool charging = false;
     private bool charging2 = false;
