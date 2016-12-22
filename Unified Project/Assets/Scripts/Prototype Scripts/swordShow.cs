@@ -14,7 +14,7 @@ public class swordShow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
+		if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.W))
 		{
             if (Time.time > nextFire)
             {
@@ -24,7 +24,7 @@ public class swordShow : MonoBehaviour {
             }
 
         }
-		if (Input.GetKeyUp (KeyCode.LeftShift)||Input.GetKeyUp(KeyCode.RightShift)) {
+		if (Input.GetKeyUp (KeyCode.LeftShift)||Input.GetKeyUp(KeyCode.W)) {
             if (Time.time > nextFire)
             {
                 gameObject.GetComponent<Renderer>().enabled = false;

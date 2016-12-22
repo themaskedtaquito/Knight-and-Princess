@@ -25,7 +25,7 @@ public class PrincessController : MonoBehaviour {
     private GameObject CurrentShot;
     private GameObject blockType;
 
-    private int blockCharges = 5;
+    private int blockCharges = 3;
     private int knockblockCharges = 3;
     private bool charging = false;
     private bool charging2 = false;
@@ -48,7 +48,7 @@ public class PrincessController : MonoBehaviour {
         charges.onClick.AddListener(ToggleBlocks);
         knockcharges.onClick.AddListener(ToggleBlocks);
 
-        blocksInPlay = new Object[5];
+        blocksInPlay = new Object[5]; //don't declare length otherwise if statement gets messed up
 
     }
 
@@ -61,11 +61,6 @@ public class PrincessController : MonoBehaviour {
             {
                 if (blockCharges > 0)
                 {
-                    if (blocksInPlay.Length == 5)
-                    {
-                        Destroy(blocksInPlay[0]);
-                      //  blocksInPlay.Remove(0);                  
-                    }
                     PlaceBlock();
                     blockCharges -= 1;
                     charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
@@ -75,11 +70,6 @@ public class PrincessController : MonoBehaviour {
             {
                 if (knockblockCharges > 0)
                 {
-                    if (trapsInPlay.Length == 5)
-                    {
-                        Destroy(trapsInPlay[0]);
-                       // blocksInPlay.Remove(0);
-                    }
                     PlaceBlock();
                     knockblockCharges -= 1;
                     knockcharges.GetComponentInChildren<Text>().text = knockblockCharges.ToString();
@@ -92,7 +82,7 @@ public class PrincessController : MonoBehaviour {
             ToggleProjectiles();
         }
 
-        if (blockCharges < 5 && charging == false)
+        if (blockCharges < 3 && charging == false)
         {
             StartCoroutine("RestoreCharges");
         }
@@ -168,20 +158,37 @@ public class PrincessController : MonoBehaviour {
         }
     }
 
-    void PlaceBlock() //to need make it so that blocks can't be placed overlapping
+    void PlaceBlock() //uncomment block things when I actually figure out list syntax
     {
         nextFire = Time.time + fireRate;
 
         Vector3 screenPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         screenPoint.z = 1;
         tempblock = Instantiate(blockType,screenPoint, Quaternion.identity);
-        blocksInPlay[0] = tempblock;
+        //if (blockType == block)
+        //{
+        //    if (blocksInPlay.Length == 5)
+        //    {
+        //        Destroy(blocksInPlay[0]);
+        //        //  blocksInPlay.Remove(0);    .Shift()?             
+        //    }
+        //    //blocksInPlay.Add(tempblock);
+        //}
+        //else
+        //{
+        //    if (trapsInPlay.Length == 5)
+        //    {
+        //        Destroy(trapsInPlay[0]);
+        //        // blocksInPlay.Remove(0); .Shift()?  
+        //    }
+        //    //trapsInPlay.Add(tempblock);
+        //}
     }
 
     IEnumerator RestoreCharges()
     {
         charging = true;
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(7);
 		blockCharges += 1;
         charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
         charging = false;

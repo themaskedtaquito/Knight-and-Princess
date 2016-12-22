@@ -21,7 +21,13 @@ public class MoveCamera : MonoBehaviour {
                 Vector3 move;
                 move = new Vector3(0, (knight.transform.position.y + offset), 0) - new Vector3(0, transform.position.y, 0);
                 move.Normalize();
-                transform.position += move * Time.deltaTime * 7;
+                if (move.y > 0)
+                {
+                    transform.position += move * Time.deltaTime * 8;
+                }
+                else {
+                    transform.position += move * Time.deltaTime * 14;
+                }
             }
         }
     }

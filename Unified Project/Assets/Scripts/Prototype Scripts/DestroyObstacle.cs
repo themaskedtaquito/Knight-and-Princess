@@ -3,7 +3,8 @@ using System.Collections;
 
 public class DestroyObstacle : MonoBehaviour {
     public int hp;
-    public bool trap = false; 
+    public bool trap = false;
+    public PrincessController p; 
 	// Use this for initialization
 	void Start () {
 	
@@ -16,7 +17,6 @@ public class DestroyObstacle : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.tag);
         if (other.gameObject.CompareTag("Sword")){
             
             hp -= 1;
