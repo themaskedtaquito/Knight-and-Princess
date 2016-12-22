@@ -3017,8 +3017,8 @@ GameObject:
   - 114: {fileID: 861058389}
   - 50: {fileID: 861058392}
   - 95: {fileID: 861058393}
-  - 61: {fileID: 861058395}
   - 61: {fileID: 861058394}
+  - 61: {fileID: 861058395}
   m_Layer: 0
   m_Name: knight
   m_TagString: Player
@@ -3048,6 +3048,7 @@ MonoBehaviour:
   jumpForce: 1150
   moveForce: 200
   maxSpeed: 11
+  swordCollider: {fileID: 861058395}
 --- !u!212 &861058390
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3654,6 +3655,7 @@ MonoBehaviour:
   jumpForce: 1150
   moveForce: 200
   maxSpeed: 10
+  swordCollider: {fileID: 0}
 --- !u!1 &1016683254
 GameObject:
   m_ObjectHideFlags: 0
@@ -5009,11 +5011,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 70
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1

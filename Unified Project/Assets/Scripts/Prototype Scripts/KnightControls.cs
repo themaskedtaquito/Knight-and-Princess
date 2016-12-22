@@ -25,6 +25,7 @@ public class KnightControls : MonoBehaviour {
     private bool jump = false;
 
 	private Animator KnightAnimator;
+    public BoxCollider2D swordCollider;
 
 
 //	private bool armed = false;
@@ -97,8 +98,8 @@ public class KnightControls : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.W)) {
 
-            gameObject.GetComponent<BoxCollider2D>().enabled = true;
-            gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+            swordCollider.enabled = true;
+            swordCollider.isTrigger = true;
             KnightAnimator.SetBool ("Armed", true);          
             knight.tag = "Sword";
             
@@ -106,7 +107,7 @@ public class KnightControls : MonoBehaviour {
         } else {
 			KnightAnimator.SetBool ("Armed", false);
             knight.tag = "Player";
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            swordCollider.enabled = false;
         }
 
 
