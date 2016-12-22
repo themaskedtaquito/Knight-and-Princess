@@ -17,8 +17,9 @@ public class DestroyObstacle : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other.gameObject);
         if (other.gameObject.CompareTag("Sword")){
-            
+            Debug.Log("attack");
             hp -= 1;
             if(hp == 0)
             {

@@ -95,15 +95,19 @@ public class KnightControls : MonoBehaviour {
              rb.transform.position.z
         );
 
-		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift)) {
+		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.W)) {
 
-			KnightAnimator.SetBool ("Armed", true);
-			knight.tag = "Sword";
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+            KnightAnimator.SetBool ("Armed", true);          
+            knight.tag = "Sword";
+            
 
-		} else {
+        } else {
 			KnightAnimator.SetBool ("Armed", false);
-			knight.tag = "Player";
-		}
+            knight.tag = "Player";
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
 
 
     }

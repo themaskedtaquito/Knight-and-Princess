@@ -15,32 +15,32 @@ Platform assembly: C:\Users\minja\Desktop\Princess Liberation\Knight-and-Princes
 Loading C:\Users\minja\Desktop\Princess Liberation\Knight-and-Princess\Unified Project\PrincessLiberationWindows_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\minja\Desktop\Princess Liberation\Knight-and-Princess\Unified Project\PrincessLiberationWindows_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\minja\Desktop\Princess Liberation\Knight-and-Princess\Unified Project\PrincessLiberationWindows_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.058 seconds
+- Completed reload, in  0.060 seconds
 Platform assembly: C:\Users\minja\Desktop\Princess Liberation\Knight-and-Princess\Unified Project\PrincessLiberationWindows_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\minja\Desktop\Princess Liberation\Knight-and-Princess\Unified Project\PrincessLiberationWindows_Data\Managed\System.dll (this message is harmless)
 desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.770764 ms
+UnloadTime: 0.745085 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.168983 ms
+UnloadTime: 4.227552 ms
 
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 211.
-Total: 0.453135 ms (FindLiveObjects: 0.015012 ms CreateObjectMapping: 0.010271 ms MarkObjects: 0.152888 ms  DeleteObjects: 0.274172 ms)
+Total: 0.426271 ms (FindLiveObjects: 0.019358 ms CreateObjectMapping: 0.012246 ms MarkObjects: 0.166320 ms  DeleteObjects: 0.227555 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.358320 ms
+UnloadTime: 2.056689 ms
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 715.
-Total: 1.548640 ms (FindLiveObjects: 0.033975 ms CreateObjectMapping: 0.028839 ms MarkObjects: 0.213333 ms  DeleteObjects: 1.272097 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 730.
+Total: 4.420737 ms (FindLiveObjects: 0.072691 ms CreateObjectMapping: 0.047012 ms MarkObjects: 0.605629 ms  DeleteObjects: 3.693824 ms)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1708 -> priority: 1 
-  Thread -> id: 4e0 -> priority: 1 
+  Thread -> id: 14ec -> priority: 1 
+  Thread -> id: 391c -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.686221 ms
+UnloadTime: 1.277628 ms
 
-Unloading 118 unused Assets to reduce memory usage. Loaded Objects now: 194.
-Total: 1.751702 ms (FindLiveObjects: 0.029234 ms CreateObjectMapping: 0.015407 ms MarkObjects: 0.192394 ms  DeleteObjects: 1.514270 ms)
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 194.
+Total: 1.675850 ms (FindLiveObjects: 0.015407 ms CreateObjectMapping: 0.014222 ms MarkObjects: 0.155654 ms  DeleteObjects: 1.489776 ms)
 

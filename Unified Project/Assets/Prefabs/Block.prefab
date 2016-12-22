@@ -26,7 +26,7 @@ GameObject:
   - 114: {fileID: 114000013219100556}
   m_Layer: 12
   m_Name: Block
-  m_TagString: ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,3 +124,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   trap: 0
+  p: {fileID: 0}

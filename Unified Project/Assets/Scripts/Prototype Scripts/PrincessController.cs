@@ -41,7 +41,7 @@ public class PrincessController : MonoBehaviour {
 //		PrincessAnimator = GetComponent<Animator> ();
         CurrentShot = slow;
         blockType = block;
-        slowButton.image.color = new Color(255, 255, 0);
+        slowButton.image.color = new Color(255, 195, 0);
         charges.image.color = new Color(255, 255, 0);
         slowButton.onClick.AddListener(ToggleProjectiles);
         knockdownButton.onClick.AddListener(ToggleProjectiles);
@@ -129,14 +129,14 @@ public class PrincessController : MonoBehaviour {
         if (CurrentShot == slow)
         {
             slowButton.image.color = new Color(255,255,255);
-            knockdownButton.image.color = new Color(255, 255, 0);
+            knockdownButton.image.color = new Color(255, 195, 0);
             CurrentShot = knockdown;
             fireRate = 1.0f;
         }
         else
         {
             knockdownButton.image.color = new Color(255, 255, 255);
-            slowButton.image.color = new Color(255, 255, 0);
+            slowButton.image.color = new Color(255, 195, 0);
             CurrentShot = slow;
             fireRate = 0.5f;
         }
@@ -188,7 +188,7 @@ public class PrincessController : MonoBehaviour {
     IEnumerator RestoreCharges()
     {
         charging = true;
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(6);
 		blockCharges += 1;
         charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
         charging = false;
