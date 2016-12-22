@@ -12,7 +12,7 @@ public class KnightControls : MonoBehaviour {
     public GameObject currentPlatform;
     public Transform groundCheck;
     public GameObject groundzero;
-//	public GameObject sword;
+	public GameObject knight;
     public Boundary boundary;
 
     public float jumpForce = 500;
@@ -25,6 +25,7 @@ public class KnightControls : MonoBehaviour {
     private bool jump = false;
 
 	private Animator KnightAnimator;
+
 
 //	private bool armed = false;
 
@@ -52,20 +53,7 @@ public class KnightControls : MonoBehaviour {
 			KnightAnimator.SetBool ("Ground", false);
 		}
 
-//        if (Input.GetKeyDown(KeyCode.LeftShift)||Input.GetKeyDown(KeyCode.RightShift))
-//		{
-////			armed = true;
-////			sword.tag = "Sword";
-//			// play animation on key press, use state name
-////			KnightAnimator.SetBool ("Armed", true);
-//
-//		}
-//		if (Input.GetKeyUp (KeyCode.LeftShift)||Input.GetKeyUp(KeyCode.RightShift)) {
-////			armed = false;
-////			sword.tag = "Untagged";
-////			KnightAnimator.SetBool ("Armed", false);
-//		}
-//
+
     }
 
     void FixedUpdate()
@@ -106,6 +94,16 @@ public class KnightControls : MonoBehaviour {
             rb.transform.position.y,
              rb.transform.position.z
         );
+
+		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift)) {
+
+			KnightAnimator.SetBool ("Armed", true);
+			knight.tag = "Sword";
+
+		} else {
+			KnightAnimator.SetBool ("Armed", false);
+			knight.tag = "Player";
+		}
 
 
     }
@@ -167,4 +165,5 @@ public class KnightControls : MonoBehaviour {
         yield return new WaitForSeconds(2);
         maxSpeed = 10;
     }
+
 }
