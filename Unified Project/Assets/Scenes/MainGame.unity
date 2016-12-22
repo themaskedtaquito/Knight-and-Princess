@@ -2978,8 +2978,8 @@ MonoBehaviour:
   groundCheck: {fileID: 954642590}
   groundzero: {fileID: 1248990781}
   boundary:
-    xMin: -42
-    xMax: 40
+    xMin: -40
+    xMax: 43
   jumpForce: 1150
   moveForce: 200
   maxSpeed: 10
@@ -3684,7 +3684,7 @@ MonoBehaviour:
   shotSpawn: {fileID: 932752607}
   gameControls: {fileID: 1320395276}
   boundary:
-    xMin: -45.5
+    xMin: -43.5
     xMax: 31
   block: {fileID: 1000014111630440, guid: dc240cfa5fd8a4ee28cce271d613a27a, type: 2}
   knockblock: {fileID: 1000012321908232, guid: 3a74b781a397dcd42ae288b7ab1e9441, type: 2}
@@ -3694,6 +3694,9 @@ MonoBehaviour:
   knockdownButton: {fileID: 754447862}
   knockcharges: {fileID: 459869394}
   charges: {fileID: 1697251526}
+  blocksInPlay: []
+  trapsInPlay: []
+  tempblock: {fileID: 0}
 --- !u!212 &1027913015
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5823,7 +5826,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1765160972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.5, y: 11.598982, z: 0}
+  m_LocalPosition: {x: -6.6, y: 11.598982, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -6243,7 +6246,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011223312216, guid: f3704bd8c2004d54c884de21bbb62ea5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 28.4
+      value: 27.1
       objectReference: {fileID: 0}
     - target: {fileID: 4000011223312216, guid: f3704bd8c2004d54c884de21bbb62ea5, type: 2}
       propertyPath: m_LocalPosition.y

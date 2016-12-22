@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class PrincessController : MonoBehaviour {
@@ -29,6 +30,10 @@ public class PrincessController : MonoBehaviour {
     private bool charging = false;
     private bool charging2 = false;
 
+    public Object[] blocksInPlay;
+    public Object[] trapsInPlay;
+    public Object tempblock;
+
 //	private Animator PrincessAnimator;
 
     void Start(){
@@ -43,6 +48,7 @@ public class PrincessController : MonoBehaviour {
         charges.onClick.AddListener(ToggleBlocks);
         knockcharges.onClick.AddListener(ToggleBlocks);
 
+        blocksInPlay = new Object[5];
 
     }
 
@@ -55,6 +61,11 @@ public class PrincessController : MonoBehaviour {
             {
                 if (blockCharges > 0)
                 {
+                    if (blocksInPlay.Length == 5)
+                    {
+                        Destroy(blocksInPlay[0]);
+                      //  blocksInPlay.Remove(0);                  
+                    }
                     PlaceBlock();
                     blockCharges -= 1;
                     charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
@@ -64,6 +75,11 @@ public class PrincessController : MonoBehaviour {
             {
                 if (knockblockCharges > 0)
                 {
+                    if (trapsInPlay.Length == 5)
+                    {
+                        Destroy(trapsInPlay[0]);
+                       // blocksInPlay.Remove(0);
+                    }
                     PlaceBlock();
                     knockblockCharges -= 1;
                     knockcharges.GetComponentInChildren<Text>().text = knockblockCharges.ToString();
@@ -95,18 +111,14 @@ public class PrincessController : MonoBehaviour {
 		if (Input.GetMouseButton (0) && Time.time > nextFire) {
             // play animation on key press, use state name
             // PrincessAnimator.Play ("throw");
-            //if (Physics.Raycast(ray, out hit))
-            //{
-            //if(hit.collider.gameObject.layer != 5)
-            //{
+
             Vector3 screenPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (screenPoint.x < 45)
             {
                 nextFire = Time.time + fireRate;
                 Instantiate(CurrentShot, shotSpawn.position, shotSpawn.rotation);
+
             }
-            //    }
-            //}
 		}
 
         //		float moveH = Input.GetAxis ("Mouse ScrollWheel");
@@ -158,17 +170,18 @@ public class PrincessController : MonoBehaviour {
 
     void PlaceBlock() //to need make it so that blocks can't be placed overlapping
     {
-         nextFire = Time.time + fireRate;
+        nextFire = Time.time + fireRate;
 
         Vector3 screenPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         screenPoint.z = 1;
-        Instantiate(blockType,screenPoint, Quaternion.identity); 
+        tempblock = Instantiate(blockType,screenPoint, Quaternion.identity);
+        blocksInPlay[0] = tempblock;
     }
 
     IEnumerator RestoreCharges()
     {
         charging = true;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(6);
 		blockCharges += 1;
         charges.GetComponentInChildren<Text>().text = blockCharges.ToString();
         charging = false;
@@ -177,7 +190,7 @@ public class PrincessController : MonoBehaviour {
     IEnumerator RestoreTrapCharges()
     {
         charging2 = true;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(7);
         knockblockCharges += 1;
         knockcharges.GetComponentInChildren<Text>().text = knockblockCharges.ToString();
         charging2 = false;
