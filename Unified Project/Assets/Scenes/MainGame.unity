@@ -963,8 +963,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 231605653}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.77, y: 28.08, z: 10}
-  m_LocalScale: {x: 3.4871347, y: 3.4871335, z: 3.4871335}
+  m_LocalPosition: {x: -6.35, y: 27.5, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 396157530}
@@ -5407,18 +5407,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 58
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 70
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 90 seconds remaining
+  m_Text: 90
 --- !u!4 &1606081551 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011223312216, guid: f3704bd8c2004d54c884de21bbb62ea5,
